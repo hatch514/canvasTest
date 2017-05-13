@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <script type="text/javascript" src="js/pattern.js"></script>
   <script src="js/mozilla.js"></script>
 </head>
 <body>
@@ -24,6 +25,38 @@
  <button onClick="requisite()">requisite</button>     
  <div id="result"></div>
 
+ <div id="pattern" style="margin-top:30px;">
+   <h2>pattern demo</h2>
+   <label for='dur-input'>duration:</label>
+   <input id="dur-input" type='text' value='10' />
+   <button onclick="pattern()">redraw pattern</button>
+   <button onclick="mask()">mask triangle pattern</button>
+   <br />
+   <canvas class="square" id="patternCanvas" width="100" height="100"></canvas>
+   <canvas class="square" id="triangleCanvas" width="100" height="100"></canvas>
+   <br />
+   <label for='opa-input'>opacity:</label>
+   <input id="opa-input" type='text' value='0.4' />
+ </div>
  
+  <div>overlap area: </div>
+  <div>
+   <span> &nbsp; x: </span>
+   <input type="text" value="150" name="rect-x1"/> 
+   <input type="text" value="250" name="rect-x2"/> 
+   <br />
+   <span> &nbsp; y: </span>
+   <input type="text" value="60" name="rect-y1"/> 
+   <input type="text" value="180" name="rect-y2"/> 
+  </div>
+
+   <button onclick="overlap()">overlap</button>
+   <button onclick="overlapMasked()">overlap (masked area)</button>
+
 </body>
+<style>
+.square{
+  border:1px solid black;
+}
+</style>
 </html>

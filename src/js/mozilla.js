@@ -2,6 +2,8 @@ let cropping;
 let requisite;
 let save;
 window.onload = () => {
+  init();
+
   const canvas = document.getElementById('origin');
   ctx = canvas.getContext('2d');
 
